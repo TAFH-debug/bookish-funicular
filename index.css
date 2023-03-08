@@ -1,47 +1,70 @@
 body {
     margin: 10% 0 0 0;
     width: 100%;
-    background-image: url("bg.png");
-    background-repeat: repeat;
+    height: 100%;
+    background: linear-gradient(to top right, #F51720, #fa6226);
 }
 
-h2 {
-    font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    outline: none;
-    overflow: hidden;
-    text-decoration: underline;
-}
-
-textarea {
-    font-size: 20px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: none;
-    background: transparent;
-    width: 80%;
-    height: 70%;
-    position: absolute;
-    bottom: 0;
-}
-
-textarea:focus {
-    outline: none;
-}
-
-p { background: lime; height: 200px; width: 300px; }
-p.resizable { background: cyan; position: relative; }
-p .resizer { width: 10px; height: 10px; background: blue; position:absolute; right: 0; bottom: 0; cursor: se-resize; }
-
-.card {
-    padding: 5px;
-    margin: 10px;
-    border-radius: 5px;
+.button {
+    text-decoration: none;
+    color: black;
+    border-width: 2px;
     border-style: solid;
+    text-align: center;
+}
+
+.button {
+  --c:  #229091;
+  box-shadow: 0 0 0 .1em inset var(--c); 
+  --_g: linear-gradient(var(--c) 0 0) no-repeat;
+  background: 
+    var(--_g) calc(var(--_p,0%) - 100%) 0%,
+    var(--_g) calc(200% - var(--_p,0%)) 0%,
+    var(--_g) calc(var(--_p,0%) - 100%) 100%,
+    var(--_g) calc(200% - var(--_p,0%)) 100%;
+  background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+  outline-offset: .1em;
+  transition: background-size .4s, background-position 0s .4s;
+  height: 75px;
+  width: 150px;
+  position: absolute;
+  bottom: 200px;
+  left: 45%;
+  font-family: system-ui, sans-serif;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: .1em .6em;
+  font-weight: bold;  
+}
+
+.button:hover {
+  --_p: 100%;
+  transition: background-position .4s, background-size 0s;
+}
+
+.button:active {
+  box-shadow: 0 0 9e9q inset #0009; 
+  background-color: var(--c);
+  color: #fff;
+}
+
+input {
+    background: radial-gradient(#d32e18 15px, #F8D210);
+    border-radius: 5px;
     border-width: 1px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+
+input:active {
+    background: radial-gradient(#a52312 15px, #c4a50d);
 }
 
 html {
+    height: 100%;
     font-size: 10pt;
     line-height: 1.4;
     font-weight: 400;
@@ -51,7 +74,8 @@ html {
 
 header {
     height: 10%;
-    background-color: #F8D210;
+    color: #15d45e;
+    background: #F8D210;
     width: 100%;
     padding: 10px;
     font-size: 140%;
@@ -73,6 +97,11 @@ header h1 {
     margin: 0;
     padding: 0 50% 10px 0;
     font-size: 50px;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
 }
 
 nav a {

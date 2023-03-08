@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="notes.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="index.css" rel="stylesheet">
     <title>Notes</title>
 </head>
 <header>
@@ -16,17 +16,16 @@
             <path d="M27.12,2.88a3.08,3.08,0,0,0-4.24,0L17,8.75,16,14.05,21.25,13l5.87-5.87A3,3,0,0,0,27.12,2.88Zm-6.86,8.27-1.76.35.35-1.76,3.32-3.33,1.42,1.42Zm5.45-5.44-.71.7L23.59,5l.7-.71h0a1,1,0,0,1,1.42,0A1,1,0,0,1,25.71,5.71Z"/>
             </g>
         </svg>
-        <h1><a href="./index.html">Notes</a></h1>
+        <h1><a href="index.html">Notes</a></h1>
         <nav>
-            <a href="./notes.html"></a>
+          <a onclick="add_card()" href=#>Add Card</a>
+          <a onclick="delete_card()" href=#>Delete Card</a>
+          <a onclick="color_card()" href=#>Change Color</a>
+          <input type="color" id="color"/>
         </nav>
     </div>
 </header>
-<body>
-    <div>
-        <a class="button" href="notes.html">Start</a>
-        <input type="button" onclick="change_theme()">
-    </div>
-    <script src="index.js"></script>
+<body class="cont">
+    <script src="notes.js"></script> <!--Добавляем скриптовый файл-->
 </body>
 </html>
