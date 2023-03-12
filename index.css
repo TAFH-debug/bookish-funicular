@@ -13,6 +13,18 @@ body {
     text-align: center;
 }
 
+.cnt1 {
+  display: flex;
+  justify-content: center;
+} 
+
+.cnt3 {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+  height: 60%;
+}
+
 .button {
   --c:  #229091;
   box-shadow: 0 0 0 .1em inset var(--c); 
@@ -27,13 +39,11 @@ body {
   transition: background-size .4s, background-position 0s .4s;
   height: 75px;
   width: 150px;
-  position: absolute;
-  bottom: 200px;
-  left: 45%;
   font-family: system-ui, sans-serif;
   font-size: 2.5rem;
   cursor: pointer;
   padding: .1em .6em;
+  margin: 20px;
   font-weight: bold;  
 }
 
